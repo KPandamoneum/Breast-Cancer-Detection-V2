@@ -1,9 +1,6 @@
 from PIL import Image
 
 import torch
-import torch.nn as nn
-from torchvision.transforms import Resize, Compose, ToTensor
-import pytorch_lightning as pl
 
 
 # Histo Vs Random

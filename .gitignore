@@ -1,1 +1,16 @@
+# model
 extra/model_ver4.ckpt
+
+# copy templates
+templates/index copy.html
+templates/result copy.html
+static/index copy.css
+static/result copy.css
+staticfiles/index copy.css
+staticfiles/result copy.css
+
+# images
+media/8863_idx5_x1351_y1251_class0.png 
+media/mdb010.png 
+media/mdb013.png 
+media/mdb075.png

@@ -1,16 +1,203 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result</title>
-    <link rel="stylesheet" href="{% static 'result.css' %}">
-</head>
-<body>
-    <div class="container">
-        <h2>Result</h2>
-        <p>{{ result }}</p>
-    </div>
-</body>
-</html>
+    {% load static %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Breast Cancer Detection</title>
+        <!-- <link rel="stylesheet" href="{% static 'result.css' %}"> -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet"
+        />
+    </head>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+        }
+        body {
+        max-width: 100vw;
+        }
+        .header {
+        width: 100vw;
+        height: 50vh;
+        background-color: #c73a56;
+        overflow: hidden;
+        position: relative;
+        }
+        nav {
+        height: 2rem;
+        justify-content: space-between;
+        /* width: 100%; */
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        }
+        ul {
+        display: flex;
+        list-style: none;
+        gap: 4rem;
+        color: white;
+        height: 2rem;
+        align-items: center;
+        font-weight: 100;
+        }
+        button {
+        all: unset;
+        }
+        .find-help {
+        font-size: 1rem;
+        border-radius: 20rem;
+        background-color: white;
+        color: #c73a56;
+        padding: 0.5rem 1rem;
+        }
+        .donate {
+        font-size: 1rem;
+        border-radius: 20rem;
+        background-color: #75314b;
+        color: white;
+        padding: 0.5rem 1rem;
+        }
+        h1 {
+        position: absolute;
+        line-height: 4rem;
+        font-size: 3rem;
+        font-weight: 500;
+        top: 10rem;
+        left: 5rem;
+        width: 30%;
+        color: white;
+        }
+
+        .find-support {
+        position: absolute;
+        top: 18rem;
+        left: 5rem;
+        padding: 1.2rem;
+        outline: 1px solid white;
+        background-color: transparent;
+        border-radius: 20rem;
+        color: white;
+        }
+        .hero-image {
+        width: 50%;
+        position: absolute;
+        top: 5rem;
+        right: 10rem;
+        height: 95vh;
+        width: auto;
+        }
+        section {
+        background-color: white;
+        padding: 4rem 2rem;
+        }
+        h2 {
+        text-align: center;
+        color: #c73a56;
+        }
+        p {
+        text-align: justify;
+        width: 70%;
+        margin: 2% 15%;
+        line-height: 2rem;
+        }
+        .submit-button {
+        padding: 1rem 1.2rem;
+        outline: 1px solid #c73a56;
+        background-color: white;
+        border-radius: 20rem;
+        color: #c73a56;
+        width: 5rem;
+        }
+        footer {
+        width: 100%;
+        height: 20vh;
+        background-color: #c73a56;
+        overflow: hidden;
+        position: relative;
+        }
+        .footer-text {
+        color: white;
+        text-align: center;
+        }
+        form{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+
+            flex-direction: column;
+            gap: 4;
+            width: 40%;
+            margin: 5% 30%;
+        }
+
+        .div-analysis{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+    <body>
+        <div class="container">
+        <header class="header">
+            <nav>
+            <div>Logo</div>
+            <ul>
+                <li>About Breast Cancer</li>
+                <li>Find Support</li>
+                <li>Get Involved</li>
+                <li>More</li>
+                <button type="button" class="find-help">Find Help</button>
+                <button type="button" class="donate">Donate</button>
+            </ul>
+            </nav>
+            <h1>Check your results below</h1>
+
+            <button type="button" class="find-support">Find Support</button>
+        </header>
+        <section>
+            <h2>Our Mission</h2>
+            <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum error
+            et neque aut quis eius, quidem fugiat iusto ipsa aspernatur doloremque
+            explicabo deleniti a quo iste tempora maxime numquam quasi. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Earum error et
+            neque aut quis eius, quidem fugiat iusto ipsa aspernatur doloremque
+            explicabo deleniti a quo iste tempora maxime numquam quasi. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Earum error et
+            neque aut quis eius, quidem fugiat iusto ipsa aspernatur doloremque
+            explicabo deleniti a quo iste tempora maxime numquam quasi. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Earum error et
+            neque aut quis eius, quidem fugiat iusto ipsa aspernatur doloremque
+            explicabo deleniti a quo iste tempora maxime numquam quasi.
+            </p>
+
+                <h2>Analyze your Boobs Now!!</h2>
+                <h2>Result</h2>
+            <span> <p>{{ result }}</p>
+            </span>
+                
+        </section>
+        <footer>
+            <p class="footer-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum error
+            et neque aut quis eius, quidem fugiat iusto ipsa aspernatur doloremque
+            explicabo deleniti a quo iste tempora maxime numquam quasi.
+            <br />
+            <p style="text-align: center; color:white;">Created By a Biomed Student in Bells University Of Technology.</p>
+            </p>
+        </footer>
+        </div>
+    </body>
+    </html>

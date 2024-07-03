@@ -62,8 +62,7 @@ def predict_histopathological(image_path):
     predicted_class = output.argmax().item()
 
     # Map the class index to the corresponding label (e.g., cancer or non-cancer)
-    label = "Image has cancer" if predicted_class == 1 else "Image has no cancer"
-
+    label = 'IMAGE HAS CANCER' if predicted_class == 1 else 'IMAGE HAS NO CANCER'
     return label
 
 
@@ -125,7 +124,7 @@ def predict_mammographical(image_path):
     predicted_class = output.argmax().item()
 
     # Map the predicted class to human-readable labels    
-    label = 'Image has cancer' if predicted_class == 1 else 'Image has no cancer'
+    label = 'IMAGE HAS CANCER' if predicted_class == 1 else 'IMAGE HAS NO CANCER'
 
     return label
 

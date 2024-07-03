@@ -8,6 +8,7 @@ def predict_disease(request):
     if request.method == 'POST' and request.FILES['image']:
         image = request.FILES['image']
         uploaded_image = UploadedImage.objects.create(image=image)
+        image_url = uploaded_image.image.url
         image_path = uploaded_image.image.path
         # Check if the image is histopathological
         histo_vs_rando_result = predict_histo_vs_rando(image_path)
@@ -24,5 +25,5 @@ def predict_disease(request):
                 result = mammographical_result
             else:
                 result = rando_vs_mammo_result
-        return render(request, 'result.html', {'result': result})
+        return render(request, 'result.html', {'result': result, 'image_url': image_url})
     return render(request, 'index.html')
